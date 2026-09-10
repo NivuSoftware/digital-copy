@@ -1,0 +1,267 @@
+:root {
+  --cyan: #12add6;
+  --magenta: #da0b76;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  scroll-padding-top: 78px;
+}
+body {
+  overflow-x: hidden;
+}
+button {
+  font: inherit;
+}
+
+.progress {
+  inset: 0 0 auto;
+  width: 100%;
+  background: linear-gradient(90deg, var(--cyan), var(--magenta), var(--green));
+  transform-origin: left;
+  z-index: 30;
+}
+
+.nav {
+  z-index: 20;
+  transition:
+    height 0.3s var(--ease-out-expo),
+    background 0.3s var(--ease-out-expo),
+    box-shadow 0.3s var(--ease-out-expo);
+}
+.nav-scrolled {
+  height: 68px;
+  background: #061b35f5;
+  box-shadow: 0 8px 24px #03122426;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.brand-logo {
+  display: block;
+  position: relative;
+  width: 210px;
+  height: 52px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 5px;
+}
+.brand-logo img {
+  position: absolute;
+  width: 210px;
+  height: auto;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.brand-logo-footer {
+  width: 238px;
+  height: 58px;
+}
+.brand-logo-footer img {
+  width: 238px;
+}
+.nav nav a {
+  position: relative;
+  padding: 10px 0;
+  transition: color 0.2s;
+}
+.nav nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 1px;
+  background: var(--green);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s var(--ease-out-expo);
+}
+.nav nav a:hover {
+  color: #fff;
+}
+.nav nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.mobile-menu {
+  color: #fff;
+  background: none;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+.mobile-nav {
+  display: none;
+}
+
+.hero {
+  min-height: 620px;
+  overflow: hidden;
+}
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+.hero h1,
+.section h2,
+.dark-section h2,
+.brands h2,
+.promise h2,
+.contact h2 {
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.hero-text,
+.section-head > p,
+.contact > div:first-child > p:last-child {
+  text-wrap: pretty;
+}
+.hero-visual {
+  min-height: 620px;
+}
+.hero-visual img {
+  height: 115%;
+}
+.hero-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #061b3530, transparent 35%);
+  pointer-events: none;
+}
+.visual-tag {
+  border-left: 0;
+  border: 1px solid #ffffff24;
+  border-radius: 5px;
+  z-index: 2;
+}
+.hero-index {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  color: #fff9;
+  font-size: 10px;
+  letter-spacing: 2px;
+  z-index: 2;
+}
+
+.service {
+  background: #fff;
+  box-shadow: none;
+}
+.service-image {
+  overflow: hidden;
+}
+.service:hover {
+  box-shadow: 0 6px 8px #0b203914;
+}
+.brand-marquee {
+  border-block: 1px solid var(--line);
+  margin-top: 45px;
+  padding: 30px 0;
+  overflow: hidden;
+}
+.brand-track {
+  display: flex;
+  width: max-content;
+}
+.brand-track span {
+  width: 220px;
+  flex: none;
+  font-size: 15px;
+  font-weight: 800;
+  color: #526875;
+}
+.brand-track span:nth-child(2n) {
+  color: #ba245d;
+  font-family: Georgia, serif;
+  font-size: 21px;
+}
+.float-wa {
+  font-size: inherit;
+  z-index: 10;
+}
+
+@media (max-width: 850px) {
+  .brand-logo {
+    width: 180px;
+    height: 46px;
+  }
+  .brand-logo img {
+    width: 180px;
+  }
+  .mobile-nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    inset: 68px 0 auto;
+    background: #061b35;
+    color: #fff;
+    padding: 24px 5vw 30px;
+    z-index: 19;
+    box-shadow: 0 12px 20px #03122440;
+  }
+  .mobile-nav a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ffffff1c;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .mobile-nav a span {
+    color: var(--green);
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  .hero-visual {
+    min-height: 330px;
+  }
+  .hero-visual img {
+    height: 118%;
+  }
+  .brand-logo-footer {
+    width: 220px;
+    height: 54px;
+  }
+  .brand-logo-footer img {
+    width: 220px;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand-logo {
+    width: 158px;
+    height: 40px;
+  }
+  .brand-logo img {
+    width: 158px;
+  }
+  .visual-tag {
+    left: 18px;
+    bottom: 18px;
+    font-size: 11px;
+  }
+  .brand-track span {
+    width: 170px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
