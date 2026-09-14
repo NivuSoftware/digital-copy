@@ -1,0 +1,188 @@
+/* ==========================================================================
+   Brands Section Styles (Carrusel Full-Width Edge-to-Edge Sin Contenedores)
+   Por defecto: Blanco y Negro (Grayscale)
+   Hover: Revela Color Original de Marca + Escala
+   ========================================================================== */
+
+.brands-section {
+  width: 100%;
+  background: var(--background); /* #0c121e */
+  padding: 60px 0 68px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  overflow: hidden;
+  position: relative;
+}
+
+.brands-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.brands-label {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--foreground-muted);
+  margin-bottom: 34px;
+  padding: 0 20px;
+}
+
+/* Carrusel Full-Width sin restricciones de ancho de contenedor */
+.brands-carousel-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 22px 0;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+}
+
+.brands-carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 84px;                /* Espaciado generoso y armónico entre logos grandes */
+  width: max-content;
+  animation: brandsMarquee 34s linear infinite;
+  will-change: transform;
+}
+
+.brands-carousel-wrapper:hover .brands-carousel-track {
+  animation-play-state: paused;
+}
+
+@keyframes brandsMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+
+.brands-carousel-track--reduced {
+  animation: none !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Sin contenedores por cada uno (sin tarjetas blancas, sin bordes, sin sombras) */
+.brands-logo-item,
+.brands-logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* Por defecto: Blanco y negro (monocromático elegante con gran visibilidad) */
+.brands-logo-item img,
+.brands-logo-card img {
+  height: 112px;            /* Aumento significativo de tamaño */
+  max-height: 120px;
+  width: auto;
+  max-width: 340px;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(1.6) contrast(0.88);
+  opacity: 0.48;
+  transition: filter 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: filter, opacity, transform;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover: Se pintan del COLOR ORIGINAL del logo */
+.brands-logo-item:hover img,
+.brands-logo-card:hover img {
+  filter: grayscale(0%) brightness(1) contrast(1) drop-shadow(0 0 22px rgba(255, 255, 255, 0.25));
+  opacity: 1;
+  transform: scale(1.14);
+}
+
+/* Konica: logo con texto negro que se pierde contra el fondo oscuro.
+   En vez de una tarjeta, un resplandor difuso (blur, sin bordes) detrás
+   del logo para que se lea, conservando el mismo efecto grayscale->color. */
+.brands-logo-item--light-bg {
+  position: relative;
+}
+
+.brands-logo-item--light-bg::before {
+  content: '';
+  position: absolute;
+  inset: -6px -18px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.55) 45%,
+    rgba(255, 255, 255, 0) 75%
+  );
+  filter: blur(6px);
+  opacity: 0.85;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.brands-logo-item--light-bg:hover::before {
+  opacity: 1;
+}
+
+.brands-logo-item--light-bg img {
+  filter: none;
+  opacity: 0.85;
+}
+
+.brands-logo-item--light-bg:hover img {
+  filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.4));
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .brands-section {
+    padding: 46px 0 52px;
+  }
+
+  .brands-carousel-track {
+    gap: 48px;
+  }
+
+  .brands-logo-item img,
+  .brands-logo-card img {
+    height: 74px;
+    max-height: 80px;
+    max-width: 230px;
+  }
+
+  .brands-logo-item--light-bg::before {
+    inset: -4px -12px;
+  }
+}

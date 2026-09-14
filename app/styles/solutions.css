@@ -1,0 +1,151 @@
+/* ==========================================================================
+   Solutions Section Styles ("Tecnología que impulsa tu negocio")
+   ========================================================================== */
+
+.lower-section {
+  position: relative;
+  background: linear-gradient(145deg, #0c121e 0%, #121c2d 55%, #0e1625 100%);
+  color: #ffffff;
+  padding: 64px clamp(20px, 6vw, 80px) 100px;
+  overflow: hidden;
+}
+
+.lower-ambient-glow {
+  position: absolute;
+  bottom: -10%;
+  left: 25%;
+  width: 600px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(110, 191, 74, 0.09) 0%, transparent 70%);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.lower-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(36px, 5vw, 72px);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.lower-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.lower-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.lower-tag::before {
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.lower-title {
+  font-size: clamp(32px, 3.8vw, 50px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  text-wrap: balance;
+}
+
+.lower-title-highlight {
+  color: var(--accent);
+  position: relative;
+}
+
+.lower-desc {
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.65;
+  color: #cbd5e1;
+  margin: 0 0 32px 0;
+  max-width: 540px;
+}
+
+.lower-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.lower-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14.5px;
+  color: #e2e8f0;
+}
+
+.lower-feature-item svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.lower-visual-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--background-card);
+}
+
+.lower-visual-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lower-visual-card:hover img {
+  transform: scale(1.03);
+}
+
+.lower-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(12, 18, 30, 0.92) 0%, transparent 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.lower-card-badge {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(110, 191, 74, 0.95);
+  padding: 6px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 1100px) {
+  .lower-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

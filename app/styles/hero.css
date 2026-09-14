@@ -1,0 +1,420 @@
+/* ==========================================================================
+   Hero Section Styles (Asymmetric Composition, Photo Overlay, Brands & CTAs)
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: clamp(620px, 72vh, 760px);
+  height: auto;
+  background: radial-gradient(ellipse at 25% 45%, rgba(20, 30, 48, 0.85) 0%, rgba(12, 18, 30, 0.98) 60%, #0c121e 100%);
+  color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-top: clamp(105px, 14vh, 140px);
+  padding-bottom: clamp(36px, 5vh, 50px);
+}
+
+/* 1. Capa Fotográfica Protagonista: 56% derecho, edge-to-edge con desvanecimiento */
+.hero-photo-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 56%;
+  z-index: 1;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 8%,
+    black 28%,
+    black 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 30%,
+    black 100%
+  );
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 68% center;
+}
+
+/* Fusión progresiva fondo oscuro -> fotografía */
+.hero-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #0c121e 0%,
+    #0c121e 22%,
+    rgba(12, 18, 30, 0.65) 42%,
+    rgba(12, 18, 30, 0.12) 68%,
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* 2. Gran superficie diagonal estructural en verde corporativo #6EBF4A */
+.hero-diagonal-shape {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 42%;
+  width: 22%;
+  clip-path: polygon(0 0, 72% 0, 100% 100%, 18% 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(110, 191, 74, 0.3) 0%,
+    rgba(110, 191, 74, 0.05) 100%
+  );
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* 3. Contenedor de contenido izquierdo */
+.hero-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding-inline: clamp(24px, 5vw, 64px);
+}
+
+.hero-content-wrapper {
+  max-width: 620px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 3.6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.hero-title-accent {
+  color: var(--accent); /* #6EBF4A */
+}
+
+.hero-description {
+  max-width: 480px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.88);
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+.hero-accent-line {
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 12px;
+  border-radius: 2px;
+  transform-origin: left;
+}
+
+/* 4 Mini Servicios en Fila Horizontal */
+.hero-services-block {
+  margin-top: 20px;
+}
+
+.hero-pills-row {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(24px, 2.6vw, 36px);
+}
+
+.hero-pill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  width: 80px;
+  transition: transform 0.2s ease;
+}
+
+.hero-pill-item:hover {
+  transform: translateY(-2px);
+}
+
+.hero-pill-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+.hero-pill-item:hover .hero-pill-icon-circle {
+  background: rgba(110, 191, 74, 0.15);
+  border-color: var(--accent);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.hero-pill-label {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* ==========================================================================
+   Marcas Asociadas (Konica Minolta & Ricoh) - Logos Grandes y Destacados
+   ========================================================================== */
+.hero-brands-container {
+  margin-top: 20px;
+}
+
+.hero-brands-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-brands-label {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-brands-items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-brand-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 78px;
+  min-width: 175px;
+  padding: 0 28px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-brand-logo-wrap:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 14px 42px rgba(110, 191, 74, 0.45);
+}
+
+.hero-brand-img {
+  height: 56px;
+  max-height: 60px;
+  width: auto;
+  max-width: 170px;
+  object-fit: contain;
+}
+
+.hero-brand-pipe {
+  width: 2px;
+  height: 54px;
+  background: rgba(255, 255, 255, 0.35);
+  margin: 0 8px;
+}
+
+/* CTAs Inferiores del Hero */
+.hero-cta-row {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+  height: 50px;
+  border-radius: 9999px;
+  padding: 0 28px;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 20px var(--accent-glow);
+  border: none;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px var(--accent-glow);
+  color: #ffffff;
+}
+
+.hero-btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  height: 50px;
+  border-radius: 9999px;
+  padding: 0 26px;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.75);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Media Queries del Hero */
+@media (max-width: 1100px) {
+  .hero-content-wrapper {
+    max-width: 52vw;
+  }
+
+  .hero-photo-wrapper {
+    width: 54%;
+  }
+
+  .hero-diagonal-shape {
+    left: 45%;
+    width: 20%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    height: auto;
+    min-height: 0;
+    padding: 104px 0 40px;
+    flex-direction: column;
+  }
+
+  .hero-container {
+    height: auto;
+    padding-inline: clamp(20px, 6vw, 40px);
+  }
+
+  .hero-content-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-photo-wrapper {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    order: 2;
+    margin-top: 36px;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    mask-image: none;
+    -webkit-mask-image: none;
+    border-radius: 16px;
+  }
+
+  .hero-photo-overlay {
+    background: linear-gradient(to top, #0c121e 0%, transparent 45%);
+  }
+
+  .hero-diagonal-shape {
+    display: none;
+  }
+
+  .hero-pills-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+  }
+
+  .hero-pill-item {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .hero-pill-label {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .hero-brand-logo-wrap {
+    height: 76px;
+    min-width: 155px;
+    padding: 0 20px;
+  }
+
+  .hero-brand-img {
+    height: 52px;
+    max-height: 56px;
+    max-width: 150px;
+  }
+
+  .hero-brand-pipe {
+    height: 52px;
+  }
+
+  .hero-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(2.1rem, 8.5vw, 2.7rem);
+  }
+
+  .hero-photo-wrapper {
+    height: 280px;
+  }
+}

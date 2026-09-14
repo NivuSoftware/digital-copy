@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Floating WhatsApp Button Styles
+   ========================================================================== */
+
+.float-wa {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 28px var(--accent-glow);
+  z-index: 55;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s;
+}
+
+.float-wa:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 12px 32px rgba(110, 191, 74, 0.6);
+  color: #ffffff;
+}

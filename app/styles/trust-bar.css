@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Trust Bar / Value Band Styles (Fondo Blanco, 4 Columnas con Separadores)
+   ========================================================================== */
+
+.value-band-section {
+  background-color: var(--light-bg);
+  color: var(--foreground-dark);
+  padding: 32px clamp(20px, 6vw, 80px);
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid var(--line-gray);
+}
+
+.value-band-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.value-band-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 8px clamp(16px, 3vw, 36px);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  position: relative;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.value-band-item:not(:last-child) {
+  border-right: 1px solid rgba(15, 23, 42, 0.12);
+}
+
+.value-band-item:hover {
+  transform: translateY(-4px);
+}
+
+.value-band-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: rgba(110, 191, 74, 0.12);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.value-band-item:hover .value-band-icon-wrap {
+  background: var(--accent);
+  color: #ffffff;
+  transform: scale(1.08);
+  box-shadow: 0 10px 24px var(--accent-glow);
+}
+
+.value-band-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--foreground-dark);
+  margin: 0 0 8px 0;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.value-band-desc {
+  font-size: 14px;
+  color: var(--foreground-dark-muted);
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+  max-width: 250px;
+}
+
+@media (max-width: 1100px) {
+  .value-band-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .value-band-item:nth-child(1),
+  .value-band-item:nth-child(2) {
+    border-bottom: 1px solid rgba(15, 23, 42, 0.12);
+    padding-bottom: 32px;
+  }
+
+  .value-band-item:nth-child(3),
+  .value-band-item:nth-child(4) {
+    padding-top: 32px;
+  }
+
+  .value-band-item:nth-child(odd) {
+    border-right: 1px solid rgba(15, 23, 42, 0.12);
+  }
+
+  .value-band-item:nth-child(even) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .value-band-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .value-band-item {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1) !important;
+    padding: 24px 16px !important;
+  }
+
+  .value-band-item:last-child {
+    border-bottom: none !important;
+  }
+}
