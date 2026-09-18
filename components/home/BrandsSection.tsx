@@ -1,57 +1,34 @@
-import { motion, useReducedMotion } from 'framer-motion';
-
 interface Brand {
   name: string;
   src: string;
-  needsLightBg?: boolean;
 }
 
 const brands: Brand[] = [
-  { name: 'Konica Minolta', src: '/imgs/brands/konicalogo.jpg', needsLightBg: true },
+  { name: 'Konica Minolta', src: '/imgs/brands/konicalogo.jpg' },
   { name: 'Ricoh', src: '/imgs/brands/ricoh.png' },
-  { name: 'Kyocera', src: '/imgs/brands/Kyocera-Logo.png', needsLightBg: true },
+  { name: 'Kyocera', src: '/imgs/brands/Kyocera-Logo.png' },
   { name: 'Canon', src: '/imgs/brands/canonlogo.png' },
-  { name: 'Xerox', src: '/imgs/brands/Xerox-Logo.png' },
   { name: 'HP', src: '/imgs/brands/hplog.png' },
+  { name: 'Xerox', src: '/imgs/brands/Xerox-Logo.png' },
 ];
 
 export function BrandsSection() {
-  const reduce = useReducedMotion();
-
-  // Repetimos los logos 3 veces para garantizar un carrusel continuo e infinito fluido
-  const repeatedBrands = [...brands, ...brands, ...brands];
-
   return (
-    <section className="brands-section" aria-label="Marcas con las que trabajamos">
-      <div className="brands-container">
-        <motion.span
-          className="brands-label"
-          initial={{ opacity: 0, y: reduce ? 0 : 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.4 }}
-        >
-          Trabajamos con marcas líderes
-        </motion.span>
+    <section id="marcas" className="brands-section" aria-label="Marcas que trabajamos">
+      <div className="section-header-center" style={{ marginBottom: '38px' }}>
+        <span className="lower-tag" style={{ justifyContent: 'center' }}>
+          MARCAS QUE TRABAJAMOS
+        </span>
+        <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 42px)' }}>Las mejores marcas, un solo lugar</h2>
+      </div>
 
-        <div className="brands-carousel-wrapper">
-          <div
-            className={`brands-carousel-track ${reduce ? 'brands-carousel-track--reduced' : ''}`}
-          >
-            {repeatedBrands.map((brand, idx) => (
-              <div
-                key={`${brand.name}-${idx}`}
-                className={`brands-logo-item ${brand.needsLightBg ? 'brands-logo-item--light-bg' : ''}`}
-                title={brand.name}
-              >
-                <img
-                  src={brand.src}
-                  alt={brand.name}
-                  loading={idx < 6 ? 'eager' : 'lazy'}
-                />
-              </div>
-            ))}
-          </div>
+      <div className="brands-bar-wrapper">
+        <div className="brands-bar-white">
+          {brands.map((brand) => (
+            <div key={brand.name} className="brands-white-item" title={brand.name}>
+              <img src={brand.src} alt={brand.name} />
+            </div>
+          ))}
         </div>
       </div>
     </section>

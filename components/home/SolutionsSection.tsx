@@ -21,10 +21,8 @@ export function SolutionsSection() {
         {/* Left: Text & Features */}
         <motion.div
           className="lower-copy"
-          initial={{ opacity: 0, x: reduce ? 0 : -28 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
         >
           <span className="lower-tag">SOLUCIONES DE IMPRESIÓN</span>
 
@@ -70,21 +68,19 @@ export function SolutionsSection() {
         {/* Right: Output Tray Visual */}
         <motion.div
           className="lower-visual-card"
-          initial={{ opacity: 0, scale: reduce ? 1 : 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
         >
           <img
-            src="/imgs/printed_output_tray.jpg"
-            alt="Primer plano de una pila de hojas impresas a todo color saliendo de la bandeja de salida de una multifuncional"
-            loading="lazy"
+            src="/imgs/c224.jpg"
+            alt="Técnico especialista realizando calibración y servicio a multifuncional Konica Minolta bizhub C224"
           />
+
           <div className="lower-card-overlay">
             <div>
-              <span className="lower-card-badge">CALIDAD LÁSER HD</span>
+              <span className="lower-card-badge">BIZHUB C224 HD</span>
               <p style={{ margin: '8px 0 0', fontSize: '13px', color: '#cbd5e1' }}>
-                Nitidez profesional en documentos corporativos y catálogos
+                Calibración técnica y durabilidad para tu flujo de trabajo
               </p>
             </div>
           </div>

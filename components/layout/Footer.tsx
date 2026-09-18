@@ -1,129 +1,184 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTiktok,
+  FaWhatsapp,
+  FaYoutube,
+} from 'react-icons/fa';
 import { BrandLogo } from '../ui/BrandLogo';
 
-const phone = '+593982264416';
-const wa = 'https://wa.me/593982264416?text=Hola%20Digital%20Copy%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.';
+const phoneDisplay = '099 123 4567';
+const phoneRaw = '+593982264416';
+const wa =
+  'https://wa.me/593982264416?text=Hola%20Digital%20Copy%2C%20tengo%20una%20consulta%20sobre%20sus%20servicios.';
 
 const navLinks = [
   { label: 'Inicio', href: '#inicio' },
-  { label: 'Equipos', href: '#equipos' },
   { label: 'Servicios', href: '#servicios' },
+  { label: 'Equipos', href: '#equipos' },
+  { label: 'Marcas', href: '#marcas' },
   { label: 'Nosotros', href: '#nosotros' },
-  { label: 'Suministros', href: '#suministros' },
   { label: 'Contacto', href: '#contacto' },
 ];
 
 export function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer id="contacto" className="site-footer">
-      <div className="footer-main-grid">
-        {/* Brand Column */}
-        <div className="footer-brand-col">
-          <a href="#inicio" aria-label="Volver al inicio de Digital Copy">
-            <BrandLogo footer />
-          </a>
-          <p>
-            Soluciones integrales de impresión corporativa, venta y alquiler de multifuncionales,
-            suministros y soporte técnico especializado en Ecuador.
+      {/* 1. Banner Superior de Consulta Directa */}
+      <div className="footer-consultation-banner">
+        <div className="footer-consult-left">
+          <h2 className="footer-consult-title">¿Tienes alguna consulta?</h2>
+          <p className="footer-consult-desc">
+            Estamos listos para ayudarte. Escríbenos o llámanos.
           </p>
-          <div className="footer-social-row" aria-label="Redes sociales">
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-social-link"
-              aria-label="Facebook Digital Copy"
-            >
-              <FaFacebookF size={15} />
-            </a>
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-social-link"
-              aria-label="Instagram Digital Copy"
-            >
-              <FaInstagram size={15} />
-            </a>
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-social-link"
-              aria-label="LinkedIn Digital Copy"
-            >
-              <FaLinkedinIn size={15} />
-            </a>
+          <div className="footer-consult-buttons">
             <a
               href={wa}
               target="_blank"
               rel="noopener noreferrer"
-              className="footer-social-link"
-              aria-label="WhatsApp Digital Copy"
+              className="footer-btn-wa"
             >
-              <FaWhatsapp size={16} />
+              <FaWhatsapp size={18} />
+              <span>Escríbenos por WhatsApp</span>
+            </a>
+            <a href={`tel:${phoneRaw}`} className="footer-btn-call">
+              <Phone size={16} />
+              <span>Llámanos</span>
             </a>
           </div>
         </div>
 
-        {/* Navigation Column */}
-        <div>
-          <h4 className="footer-col-title">Navegación</h4>
-          <div className="footer-links-list">
-            {navLinks.map((link) => (
-              <a key={link.href} href={link.href}>
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </div>
-
-        {/* Contact Column */}
-        <div>
-          <h4 className="footer-col-title">Contacto Directo</h4>
-          <div className="footer-contact-list">
-            <div className="footer-contact-item">
+        {/* Información de Contacto Directo */}
+        <div className="footer-consult-info">
+          <div className="footer-info-item">
+            <div className="footer-info-icon-box">
               <Phone size={17} />
-              <a href={`tel:${phone}`}>+593 98 226 4416</a>
             </div>
-            <div className="footer-contact-item">
+            <div>
+              <span className="footer-info-label">Teléfono</span>
+              <a href={`tel:${phoneRaw}`} className="footer-info-val">
+                {phoneDisplay}
+              </a>
+            </div>
+          </div>
+          <div className="footer-info-item">
+            <div className="footer-info-icon-box">
               <Mail size={17} />
-              <a href="mailto:digitalcopy@gmail.com">digitalcopy@gmail.com</a>
             </div>
-            <div className="footer-contact-item">
+            <div>
+              <span className="footer-info-label">Email corporativo</span>
+              <a href="mailto:info@digitalcopy.com.ec" className="footer-info-val">
+                info@digitalcopy.com.ec
+              </a>
+            </div>
+          </div>
+          <div className="footer-info-item">
+            <div className="footer-info-icon-box">
               <MapPin size={17} />
-              <span>
-                Av. 10 de Agosto y Rumipamba
-                <br />
-                Quito, Ecuador
-              </span>
             </div>
-            <div style={{ color: '#64748b', fontSize: '12px', marginTop: '6px' }}>
-              Lun – Vie: 8:30 a 17:30
-              <br />
-              Sáb: 8:30 a 13:00
+            <div>
+              <span className="footer-info-label">Oficina matriz</span>
+              <span className="footer-info-val">Quito, Ecuador</span>
             </div>
           </div>
         </div>
 
-        {/* Map Column */}
-        <div>
-          <h4 className="footer-col-title">Ubicación en Quito</h4>
-          <div className="footer-map-container">
-            <iframe
-              title="Ubicación de Digital Copy en Quito, Ecuador"
-              src="https://www.google.com/maps?q=Av.%2010%20de%20Agosto%20y%20Rumipamba%2C%20Quito%2C%20Ecuador&output=embed"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+        {/* Mini Mapa Estilizado de Quito con Enlace Directo */}
+        <a
+          href="https://maps.google.com/?q=Quito%2C+Ecuador"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="footer-consult-map-card"
+          title="Ver ubicación de Digital Copy en Google Maps"
+        >
+          <div className="footer-map-graphic">
+            <div className="footer-map-grid" />
+            <div className="footer-map-pin">
+              <div className="footer-map-pin-pulse" />
+              <MapPin size={24} className="footer-map-pin-icon" />
+            </div>
+            <span className="footer-map-label">Quito</span>
           </div>
+          <span className="footer-map-cta">Ver en Google Maps ↗</span>
+        </a>
+
+        {/* Redes Sociales */}
+        <div className="footer-consult-social">
+          <span className="footer-social-title">Síguenos en redes</span>
+          <div className="footer-social-icons">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-social-btn"
+              aria-label="Facebook"
+            >
+              <FaFacebookF size={14} />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-social-btn"
+              aria-label="Instagram"
+            >
+              <FaInstagram size={14} />
+            </a>
+            <a
+              href="https://tiktok.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-social-btn"
+              aria-label="TikTok"
+            >
+              <FaTiktok size={13} />
+            </a>
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-social-btn"
+              aria-label="YouTube"
+            >
+              <FaYoutube size={14} />
+            </a>
+          </div>
+          <span className="footer-social-tagline">Tecnología que impulsa tu negocio</span>
         </div>
       </div>
 
-      <div className="footer-bottom-bar">
-        <span>© {new Date().getFullYear()} Digital Copy. Todos los derechos reservados.</span>
-        <a href="#inicio">Volver arriba ↑</a>
+      {/* 2. Barra Inferior con Logo, Enlaces, Copyright y Volver Arriba */}
+      <div className="footer-bottom-bar-v2">
+        <div className="footer-bottom-brand">
+          <BrandLogo footer />
+        </div>
+
+        <nav className="footer-bottom-links" aria-label="Navegación pie de página">
+          {navLinks.map((link) => (
+            <a key={link.href} href={link.href}>
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="footer-bottom-right">
+          <span className="footer-copyright-text">
+            © 2026 Digital Copy. Todos los derechos reservados.
+          </span>
+          <button
+            type="button"
+            onClick={scrollToTop}
+            className="footer-back-top"
+            aria-label="Volver arriba"
+          >
+            ↑ Volver arriba
+          </button>
+        </div>
       </div>
     </footer>
   );

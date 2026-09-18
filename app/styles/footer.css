@@ -1,147 +1,393 @@
 /* ==========================================================================
-   Footer Styles
+   Footer Styles (Maqueta Oficial)
    ========================================================================== */
 
 .site-footer {
   background: #080d16;
   color: #ffffff;
-  padding: 75px clamp(20px, 6vw, 80px) 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 60px clamp(16px, 4vw, 60px) 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footer-main-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 0.8fr 1fr 1.1fr;
-  gap: clamp(28px, 4vw, 60px);
+/* 1. Banner Superior de Consulta Directa */
+.footer-consultation-banner {
   max-width: 1360px;
   margin: 0 auto 50px;
-}
-
-.footer-brand-col p {
-  color: var(--foreground-muted);
-  font-size: 13.5px;
-  line-height: 1.6;
-  margin: 20px 0 24px;
-  max-width: 320px;
-}
-
-.footer-social-row {
-  display: flex;
-  gap: 10px;
-}
-
-.footer-social-link {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  display: flex;
+  background: #0d1522;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: clamp(24px, 3.5vw, 40px);
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
   align-items: center;
-  justify-content: center;
-  color: #cbd5e1;
+  gap: clamp(20px, 3vw, 36px);
+}
+
+.footer-consult-title {
+  font-size: clamp(22px, 2.2vw, 30px);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.footer-consult-desc {
+  font-size: 14.5px;
+  color: var(--foreground-muted);
+  margin: 0 0 20px;
+}
+
+.footer-consult-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #6EBF4A;
+  color: #0c121e;
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 11px 20px;
+  border-radius: 24px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(110, 191, 74, 0.35);
+}
+
+.footer-btn-wa:hover {
+  background: #7ed957;
+  transform: translateY(-2px);
+  color: #0c121e;
+}
+
+.footer-btn-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13.5px;
+  padding: 10px 20px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.25s ease;
 }
 
-.footer-social-link:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #ffffff;
+.footer-btn-call:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
-}
-
-.footer-col-title {
-  font-size: 15px;
-  font-weight: 700;
   color: #ffffff;
-  margin: 0 0 20px;
-  letter-spacing: -0.01em;
 }
 
-.footer-links-list {
+/* Info de contacto en footer */
+.footer-consult-info {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
-.footer-links-list a {
-  color: var(--foreground-muted);
-  font-size: 13.5px;
+.footer-info-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-info-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(110, 191, 74, 0.12);
+  border: 1px solid rgba(110, 191, 74, 0.25);
+  color: #6EBF4A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.footer-info-item:hover .footer-info-icon-box {
+  background: rgba(110, 191, 74, 0.22);
+  border-color: #6EBF4A;
+  transform: scale(1.05);
+}
+
+.footer-info-label {
+  display: block;
+  font-size: 11px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.footer-info-val {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f1f5f9;
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.footer-links-list a:hover {
-  color: var(--accent);
+.footer-info-val:hover {
+  color: #6EBF4A;
 }
 
-.footer-contact-list {
+/* Mini mapa estilizado interactivo */
+.footer-consult-map-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 128px;
+  background: #08101d;
+  border: 1px solid rgba(110, 191, 74, 0.3);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.footer-consult-map-card:hover {
+  border-color: #6EBF4A;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(110, 191, 74, 0.18);
+}
+
+.footer-map-graphic {
+  flex: 1;
+  position: relative;
+  background: radial-gradient(circle at 50% 50%, rgba(14, 28, 48, 0.9) 0%, rgba(8, 16, 29, 0.95) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.footer-map-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(110, 191, 74, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(110, 191, 74, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.6;
+}
+
+.footer-map-pin {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.footer-map-pin-pulse {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(110, 191, 74, 0.25);
+  animation: mapPulse 2s infinite ease-out;
+}
+
+@keyframes mapPulse {
+  0% { transform: scale(0.6); opacity: 0.8; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.footer-map-pin-icon {
+  color: #6EBF4A;
+  filter: drop-shadow(0 4px 8px rgba(110, 191, 74, 0.5));
+}
+
+.footer-map-label {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2px 8px;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+}
+
+.footer-map-cta {
+  background: rgba(110, 191, 74, 0.12);
+  color: #6EBF4A;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-align: center;
+  padding: 6px 12px;
+  letter-spacing: 0.02em;
+  border-top: 1px solid rgba(110, 191, 74, 0.2);
+  transition: all 0.2s ease;
+}
+
+.footer-consult-map-card:hover .footer-map-cta {
+  background: #6EBF4A;
+  color: #0c121e;
+}
+
+/* Redes sociales */
+.footer-consult-social {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-.footer-contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  color: var(--foreground-muted);
-  font-size: 13.5px;
-  line-height: 1.45;
-}
-
-.footer-contact-item svg {
-  color: var(--accent);
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.footer-contact-item a:hover {
+.footer-social-title {
+  font-size: 14px;
+  font-weight: 700;
   color: #ffffff;
 }
 
-.footer-map-container {
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: #08111e;
-}
-
-.footer-map-container iframe {
-  width: 100%;
-  height: 200px;
-  border: 0;
-  display: block;
-}
-
-.footer-bottom-bar {
+.footer-social-icons {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
+}
+
+.footer-social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
   align-items: center;
-  padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  justify-content: center;
+  color: #cbd5e1;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-social-btn:hover {
+  background: #6EBF4A;
+  border-color: #6EBF4A;
+  color: #0c121e;
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 6px 16px rgba(110, 191, 74, 0.3);
+}
+
+.footer-social-tagline {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+/* 2. Barra Inferior */
+.footer-bottom-bar-v2 {
   max-width: 1360px;
   margin: 0 auto;
-  font-size: 12.5px;
-  color: var(--foreground-dark-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.footer-bottom-bar a:hover {
-  color: var(--accent);
+.footer-bottom-brand {
+  display: flex;
+  align-items: center;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+  color: #94a3b8;
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.footer-bottom-links a:hover {
+  color: #6EBF4A;
+  background: rgba(110, 191, 74, 0.08);
+  border-color: rgba(110, 191, 74, 0.25);
+  transform: translateY(-1px);
+}
+
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-copyright-text {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 400;
+}
+
+.footer-back-top {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.footer-back-top:hover {
+  background: rgba(110, 191, 74, 0.15);
+  border-color: #6EBF4A;
+  color: #6EBF4A;
 }
 
 @media (max-width: 1100px) {
-  .footer-main-grid {
+  .footer-consultation-banner {
     grid-template-columns: 1fr 1fr;
+    gap: 28px;
   }
 }
 
-@media (max-width: 850px) {
-  .footer-main-grid {
+@media (max-width: 768px) {
+  .footer-consultation-banner {
     grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 24px;
   }
 
-  .footer-bottom-bar {
+  .footer-bottom-bar-v2 {
     flex-direction: column;
-    gap: 12px;
+    align-items: center;
     text-align: center;
+    gap: 20px;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+  }
+
+  .footer-bottom-right {
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
   }
 }
+

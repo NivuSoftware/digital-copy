@@ -11,8 +11,8 @@ export function HeroSection() {
       {/* 1. Capa Fotográfica Protagonista (56% derecha, edge-to-edge con desvanecimiento) */}
       <div className="hero-photo-wrapper">
         <motion.img
-          src="/imgs/mantenimiento_c360i.jpg"
-          alt="Técnico especialista de Digital Copy realizando mantenimiento a una impresora multifuncional corporativa"
+          src="/imgs/c360i.jpg"
+          alt="Técnicos especialistas de Digital Copy realizando mantenimiento a una multifuncional Konica Minolta bizhub C360i"
           className="hero-photo"
           loading="eager"
           initial={reduce ? false : { opacity: 0, scale: 1.02 }}
