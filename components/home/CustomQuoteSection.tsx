@@ -33,8 +33,8 @@ export function CustomQuoteSection() {
         {/* Columna Centro: Foto de la multifuncional */}
         <div className="custom-quote-center">
           <img
-            src="/imgs/imc300.jpg"
-            alt="Multifuncional Ricoh IM C300 de alto rendimiento"
+            src="/imgs/impresoras-ricoh-oficina.jpg"
+            alt="Equipos multifuncionales Ricoh de alto rendimiento para oficina"
           />
         </div>
 

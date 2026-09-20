@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Footer } from '../components/layout/Footer';
 import { Header } from '../components/layout/Header';
+import { AboutSection } from '../components/home/AboutSection';
 import { BrandsSection } from '../components/home/BrandsSection';
 import { CustomQuoteSection } from '../components/home/CustomQuoteSection';
 import { HeroSection } from '../components/home/HeroSection';
 import { ServiceModal } from '../components/home/ServiceModal';
 import { ServicesSection, type ServiceItem } from '../components/home/ServicesSection';
 import { SolutionsSection } from '../components/home/SolutionsSection';
+import { SuppliesSection } from '../components/home/SuppliesSection';
 import { TestimonialsSection } from '../components/home/TestimonialsSection';
 import { TrustBar } from '../components/home/TrustBar';
 import { FloatingWhatsApp } from '../components/ui/FloatingWhatsApp';
@@ -44,10 +46,16 @@ export default function Home() {
       {/* 7. Banner Solución a Medida ("Tu equipo ideal, con el mejor respaldo") */}
       <CustomQuoteSection />
 
-      {/* 8. Lo que dicen nuestros clientes (3 Testimonios con 5 estrellas verdes) */}
+      {/* 8. Sobre Digital Copy ("Más de 15 años cuidando la productividad de tu empresa") */}
+      <AboutSection />
+
+      {/* 9. Lo que dicen nuestros clientes (3 Testimonios con 5 estrellas verdes) */}
       <TestimonialsSection />
 
-      {/* 9. Pie de Página con Banner de Consulta y Redes */}
+      {/* 10. Suministros y Consumibles (Tóneres, tambores y repuestos) */}
+      <SuppliesSection />
+
+      {/* 11. Pie de Página con Banner de Consulta y Redes */}
       <Footer />
 
       {/* Modal Accesible de Detalle de Servicio */}

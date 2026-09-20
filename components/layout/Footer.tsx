@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react';
 import {
   FaFacebookF,
   FaInstagram,
@@ -8,8 +8,12 @@ import {
 } from 'react-icons/fa';
 import { BrandLogo } from '../ui/BrandLogo';
 
-const phoneDisplay = '099 123 4567';
+const phoneDisplay = '098 226 4416';
 const phoneRaw = '+593982264416';
+const email = 'digitalcopy@gmail.com';
+const address = 'Av. 10 de Agosto y Rumipamba';
+const city = 'Quito, Ecuador';
+const mapUrl = 'https://maps.google.com/?q=Av.+10+de+Agosto+y+Rumipamba%2C+Quito%2C+Ecuador';
 const wa =
   'https://wa.me/593982264416?text=Hola%20Digital%20Copy%2C%20tengo%20una%20consulta%20sobre%20sus%20servicios.';
 
@@ -72,8 +76,8 @@ export function Footer() {
             </div>
             <div>
               <span className="footer-info-label">Email corporativo</span>
-              <a href="mailto:info@digitalcopy.com.ec" className="footer-info-val">
-                info@digitalcopy.com.ec
+              <a href={`mailto:${email}`} className="footer-info-val">
+                {email}
               </a>
             </div>
           </div>
@@ -83,29 +87,57 @@ export function Footer() {
             </div>
             <div>
               <span className="footer-info-label">Oficina matriz</span>
-              <span className="footer-info-val">Quito, Ecuador</span>
+              <span className="footer-info-val">
+                {address}
+                <br />
+                <span style={{ fontSize: '13px', color: '#94a3b8' }}>{city}</span>
+              </span>
             </div>
           </div>
         </div>
 
-        {/* Mini Mapa Estilizado de Quito con Enlace Directo */}
-        <a
-          href="https://maps.google.com/?q=Quito%2C+Ecuador"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footer-consult-map-card"
-          title="Ver ubicación de Digital Copy en Google Maps"
-        >
-          <div className="footer-map-graphic">
-            <div className="footer-map-grid" />
-            <div className="footer-map-pin">
-              <div className="footer-map-pin-pulse" />
-              <MapPin size={24} className="footer-map-pin-icon" />
+        {/* Mapa interactivo embebido (OpenStreetMap, sin API key); el enlace "Abrir" lleva a Google Maps */}
+        <div className="footer-consult-map-card">
+          <div className="footer-map-header">
+            <div className="footer-map-header-left">
+              <span className="footer-map-status-dot" aria-hidden="true" />
+              <span className="footer-map-header-title">Quito · Oficina Matriz</span>
             </div>
-            <span className="footer-map-label">Quito</span>
+            <a
+              href={mapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-map-ext-link"
+              title="Abrir ubicación en Google Maps"
+            >
+              <span>Abrir</span>
+              <ArrowUpRight size={13} aria-hidden="true" />
+            </a>
           </div>
-          <span className="footer-map-cta">Ver en Google Maps ↗</span>
-        </a>
+
+          <div className="footer-map-frame-wrapper">
+            <iframe
+              title="Ubicación de Digital Copy - Av. 10 de Agosto y Rumipamba, Quito"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-78.4960%2C-0.1850%2C-78.4820%2C-0.1740&layer=mapnik&marker=-0.17939%2C-78.48927"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="footer-map-iframe"
+            />
+          </div>
+
+          <a
+            href={mapUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-map-bottom-bar"
+            title="Ver ubicación exacta en Google Maps"
+          >
+            <MapPin size={13} style={{ color: '#6EBF4A', flexShrink: 0 }} aria-hidden="true" />
+            <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              Av. 10 de Agosto y Rumipamba
+            </span>
+          </a>
+        </div>
 
         {/* Redes Sociales */}
         <div className="footer-consult-social">

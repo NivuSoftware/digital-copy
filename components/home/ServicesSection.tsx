@@ -19,7 +19,7 @@ export const servicesData: ServiceItem[] = [
     shortDesc: 'Copiadoras e impresoras nuevas y seminuevas de las mejores marcas.',
     fullDesc:
       'Asesoría técnica para seleccionar el equipo que tu empresa necesita: equipos monocromáticos y a color, nuevos y seminuevos garantizados de marcas líderes como Konica Minolta (bizhub C224 / C360i) y Ricoh (IM C300 / IM C2500).',
-    image: '/imgs/imc2500.jpg',
+    image: '/imgs/equipos-multifuncionales.jpg',
     icon: Printer,
   },
   {
@@ -29,7 +29,7 @@ export const servicesData: ServiceItem[] = [
     shortDesc: 'Soluciones flexibles y accesibles para tu negocio.',
     fullDesc:
       'Modelos de renting corporativo y costo por página todo incluido: equipos multifuncionales de última generación, mantenimiento programado, repuestos y tóner garantizados sin inversión inicial de capital.',
-    image: '/imgs/c350i.jpg',
+    image: '/imgs/alquiler-equipos-corporativo.jpg',
     icon: ClipboardList,
   },
   {
@@ -39,7 +39,7 @@ export const servicesData: ServiceItem[] = [
     shortDesc: 'Mantenimiento preventivo y correctivo. Técnicos expertos a tu servicio.',
     fullDesc:
       'Atención técnica especializada en sitio para Konica Minolta y Ricoh. Diagnóstico de tarjetas lógicas, sistemas de fusor, unidades de imagen, calibración de color y resolución de fallas de red con instrumental de precisión.',
-    image: '/imgs/bizhub4050.jpg',
+    image: '/imgs/c360i.jpg',
     icon: Wrench,
   },
   {
@@ -49,7 +49,7 @@ export const servicesData: ServiceItem[] = [
     shortDesc: 'Tóners, repuestos y consumibles originales y compatibles de alta calidad.',
     fullDesc:
       'Tóneres certificados de alto rendimiento para Konica Minolta (TN-216, TN-321, TN-328), botellas Ricoh MP 301, tubos de color CMYK, tambores, cuchillas de limpieza y papel Crome A4 con entrega inmediata.',
-    image: '/imgs/suministros.jpg',
+    image: '/imgs/suministros-toners-tintas.jpg',
     icon: Package,
   },
   {
@@ -59,7 +59,7 @@ export const servicesData: ServiceItem[] = [
     shortDesc: 'Impresiones en blanco y negro y a color. Calidad profesional para cada necesidad.',
     fullDesc:
       'Servicio de copiado e impresión digital de alto volumen en formatos A4, A3 y tabloide. Calidad láser HD, acabado impecable y rapidez para planos, folletos y documentación empresarial.',
-    image: '/imgs/bizhub4051.jpg',
+    image: '/imgs/impresoras-ricoh-oficina.jpg',
     icon: Layers,
   },
 ];

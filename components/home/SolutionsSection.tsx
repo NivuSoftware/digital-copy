@@ -72,13 +72,13 @@ export function SolutionsSection() {
           transition={{ duration: 0.5 }}
         >
           <img
-            src="/imgs/c224.jpg"
-            alt="Técnico especialista realizando calibración y servicio a multifuncional Konica Minolta bizhub C224"
+            src="/imgs/servicio-tecnico-mantenimiento.jpg"
+            alt="Técnico especialista realizando calibración y servicio a multifuncional Konica Minolta bizhub"
           />
 
           <div className="lower-card-overlay">
             <div>
-              <span className="lower-card-badge">BIZHUB C224 HD</span>
+              <span className="lower-card-badge">BIZHUB SERIES i</span>
               <p style={{ margin: '8px 0 0', fontSize: '13px', color: '#cbd5e1' }}>
                 Calibración técnica y durabilidad para tu flujo de trabajo
               </p>
