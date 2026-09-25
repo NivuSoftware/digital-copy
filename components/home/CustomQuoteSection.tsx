@@ -2,7 +2,7 @@ import { Calendar, Headphones, ShieldCheck } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const quoteWa =
-  'https://wa.me/593982264416?text=Hola%20Digital%20Copy%2C%20busco%20una%20soluci%C3%B3n%20a%20medida%20para%20mi%20empresa.';
+  'https://wa.me/593979305325?text=Hola%20Digital%20Copy%2C%20busco%20una%20soluci%C3%B3n%20a%20medida%20para%20mi%20empresa.';
 
 export function CustomQuoteSection() {
   return (

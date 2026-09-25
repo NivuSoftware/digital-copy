@@ -1,6 +1,6 @@
 import { Package } from 'lucide-react';
 
-const suppliesWa = `https://wa.me/593982264416?text=${encodeURIComponent(
+const suppliesWa = `https://wa.me/593979305325?text=${encodeURIComponent(
   'Hola Digital Copy, necesito consultar el precio y disponibilidad de tóner o suministros.',
 )}`;
 
@@ -15,7 +15,7 @@ export function SuppliesSection() {
         <span className="lower-tag" style={{ justifyContent: 'center' }}>
           CONSUMIBLES ORIGINALES Y COMPATIBLES
         </span>
-        <h2>Tóneres, tambores y repuestos de alto rendimiento</h2>
+        <h2>Toner, cilindros y repuestos de alto rendimiento</h2>
         <p>
           Mantén la nitidez de tus impresiones al mejor costo por página con consumibles
           certificados para Konica Minolta, Ricoh, Canon, HP y Kyocera.

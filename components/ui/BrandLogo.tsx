@@ -5,20 +5,15 @@ interface BrandLogoProps {
 export function BrandLogo({ footer = false }: BrandLogoProps) {
   return (
     <div
-      className="brand-logo-container"
+      className={`brand-logo-container ${footer ? 'brand-logo-container--footer' : ''}`}
       aria-label="Digital Copy - Tu aliado en impresión"
     >
-      <div className="brand-isotype" aria-hidden="true">
-        <div className="brand-isotype-inner" />
-      </div>
-      <div className="brand-text-block">
-        <span
-          className="brand-name"
-          style={{ fontSize: footer ? '23px' : '21px' }}
-        >
-          Digital<span>Copy</span>
-        </span>
-        <span className="brand-motto">TU ALIADO EN IMPRESIÓN</span>
+      <div className="brand-logo-badge">
+        <img
+          src="/imgs/logo.webp"
+          alt="Digital Copy - Tu aliado en impresión"
+          className="brand-logo-img"
+        />
       </div>
     </div>
   );

@@ -39,7 +39,7 @@ export const servicesData: ServiceItem[] = [
     shortDesc: 'Mantenimiento preventivo y correctivo. Técnicos expertos a tu servicio.',
     fullDesc:
       'Atención técnica especializada en sitio para Konica Minolta y Ricoh. Diagnóstico de tarjetas lógicas, sistemas de fusor, unidades de imagen, calibración de color y resolución de fallas de red con instrumental de precisión.',
-    image: '/imgs/c360i.jpg',
+    image: '/imgs/servicio_tecnico.png',
     icon: Wrench,
   },
   {

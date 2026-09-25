@@ -8,14 +8,14 @@ import {
 } from 'react-icons/fa';
 import { BrandLogo } from '../ui/BrandLogo';
 
-const phoneDisplay = '098 226 4416';
-const phoneRaw = '+593982264416';
+const phoneDisplay = '097 930 5325';
+const phoneRaw = '+593979305325';
 const email = 'digitalcopy@gmail.com';
 const address = 'Av. 10 de Agosto y Rumipamba';
 const city = 'Quito, Ecuador';
 const mapUrl = 'https://maps.google.com/?q=Av.+10+de+Agosto+y+Rumipamba%2C+Quito%2C+Ecuador';
 const wa =
-  'https://wa.me/593982264416?text=Hola%20Digital%20Copy%2C%20tengo%20una%20consulta%20sobre%20sus%20servicios.';
+  'https://wa.me/593979305325?text=Hola%20Digital%20Copy%2C%20tengo%20una%20consulta%20sobre%20sus%20servicios.';
 
 const navLinks = [
   { label: 'Inicio', href: '#inicio' },

@@ -30,18 +30,17 @@ export default function Home() {
       {/* 2. Hero Principal (Especialistas en soporte y multifuncionales) */}
       <HeroSection />
 
-      {/* 3. Banda de Confianza (4 Columnas) */}
-      <TrustBar />
-
-      {/* 4. Sección Soluciones de Impresión ("Tecnología que impulsa tu negocio") */}
+      {/* 3. Sección Soluciones de Impresión ("Tecnología que impulsa tu negocio") */}
       <SolutionsSection />
 
-      {/* AHORA DESPUÉS DE ESTA SECCIÓN: Formato oficial de maqueta */}
-      {/* 5. Catálogo de Servicios (5 Cards Blancas con Iconos Verdes) */}
+      {/* 4. Catálogo de Servicios (5 Cards Blancas con Iconos Verdes) */}
       <ServicesSection onSelectService={setSelectedService} />
 
-      {/* 6. Marcas con las que trabajamos ("Las mejores marcas, un solo lugar") */}
+      {/* 5. Marcas con las que trabajamos ("Trabajamos con marcas líderes") */}
       <BrandsSection />
+
+      {/* 6. Propuesta de Valor y Garantías */}
+      <TrustBar />
 
       {/* 7. Banner Solución a Medida ("Tu equipo ideal, con el mejor respaldo") */}
       <CustomQuoteSection />

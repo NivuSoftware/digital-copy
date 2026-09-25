@@ -6,7 +6,7 @@ interface FloatingWhatsAppProps {
 }
 
 export function FloatingWhatsApp({
-  href = 'https://wa.me/593982264416?text=Hola%20Digital%20Copy%2C%20deseo%20consultar%20sobre%20sus%20servicios%20y%20equipos.',
+  href = 'https://wa.me/593979305325?text=Hola%20Digital%20Copy%2C%20deseo%20consultar%20sobre%20sus%20servicios%20y%20equipos.',
 }: FloatingWhatsAppProps) {
   const reduce = useReducedMotion();
 

@@ -18,7 +18,7 @@ const navLinks = [
 ];
 
 export function Header({
-  ctaHref = 'https://wa.me/593982264416?text=Hola%20Digital%20Copy%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n.',
+  ctaHref = 'https://wa.me/593979305325?text=Hola%20Digital%20Copy%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n.',
 }: HeaderProps) {
   const reduce = useReducedMotion();
   const [navScrolled, setNavScrolled] = useState(false);

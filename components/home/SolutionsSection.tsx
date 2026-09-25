@@ -1,8 +1,8 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Check, Phone } from 'lucide-react';
 
-const phone = '+593982264416';
-const quoteWa = 'https://wa.me/593982264416?text=Hola%20Digital%20Copy%2C%20quiero%20solicitar%20una%20propuesta%20de%20soluciones%20de%20impresi%C3%B3n.';
+const phone = '+593979305325';
+const quoteWa = 'https://wa.me/593979305325?text=Hola%20Digital%20Copy%2C%20quiero%20solicitar%20una%20propuesta%20de%20soluciones%20de%20impresi%C3%B3n.';
 
 const features = [
   'Equipos multifuncionales con conectividad de red y bajo costo por página',
@@ -72,8 +72,8 @@ export function SolutionsSection() {
           transition={{ duration: 0.5 }}
         >
           <img
-            src="/imgs/servicio-tecnico-mantenimiento.jpg"
-            alt="Técnico especialista realizando calibración y servicio a multifuncional Konica Minolta bizhub"
+            src="/imgs/soluciones_impresion.png"
+            alt="Soluciones integrales de impresión y equipamiento multifuncional para empresas"
           />
 
           <div className="lower-card-overlay">

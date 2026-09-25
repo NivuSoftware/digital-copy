@@ -9,7 +9,7 @@ interface ServiceModalProps {
 }
 
 const serviceWa = (serviceTitle: string) =>
-  `https://wa.me/593982264416?text=${encodeURIComponent(
+  `https://wa.me/593979305325?text=${encodeURIComponent(
     `Hola Digital Copy, deseo más información sobre el servicio de ${serviceTitle}.`,
   )}`;
 

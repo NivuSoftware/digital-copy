@@ -90,7 +90,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.48, ease: [0.16, 1, 0.3, 1] }}
           >
             <a
-              href="https://wa.me/593982264416?text=Hola%20Digital%20Copy%2C%20necesito%20servicio%20t%C3%A9cnico%20especializado."
+              href="https://wa.me/593979305325?text=Hola%20Digital%20Copy%2C%20necesito%20servicio%20t%C3%A9cnico%20especializado."
               target="_blank"
               rel="noopener noreferrer"
               className="hero-btn-primary"

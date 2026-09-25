@@ -10,6 +10,50 @@
   user-select: none;
 }
 
+.brand-logo-badge {
+  background: #ffffff;
+  padding: 5px 12px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.brand-logo-container:hover .brand-logo-badge {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(110, 191, 74, 0.3);
+}
+
+.brand-logo-img {
+  height: 42px;
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-logo-container--footer .brand-logo-badge {
+  padding: 6px 14px;
+}
+
+.brand-logo-container--footer .brand-logo-img {
+  height: 46px;
+  max-width: 210px;
+}
+
+@media (max-width: 768px) {
+  .brand-logo-img {
+    height: 36px;
+    max-width: 150px;
+  }
+
+  .brand-logo-badge {
+    padding: 4px 10px;
+  }
+}
+
 .brand-isotype {
   position: relative;
   width: 42px;
