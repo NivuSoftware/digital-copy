@@ -10,7 +10,7 @@ import { BrandLogo } from '../ui/BrandLogo';
 
 const phoneDisplay = '097 930 5325';
 const phoneRaw = '+593979305325';
-const email = 'digitalcopy@gmail.com';
+const email = 'digitalcopyec@gmail.com';
 const address = 'Av. 10 de Agosto y Rumipamba';
 const city = 'Quito, Ecuador';
 const mapUrl = 'https://maps.google.com/?q=Av.+10+de+Agosto+y+Rumipamba%2C+Quito%2C+Ecuador';
@@ -144,7 +144,7 @@ export function Footer() {
           <span className="footer-social-title">Síguenos en redes</span>
           <div className="footer-social-icons">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/people/Digital-Copy/61594824936841/"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-social-btn"
@@ -153,7 +153,7 @@ export function Footer() {
               <FaFacebookF size={14} />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/digitalcopyuio/"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-social-btn"
@@ -162,7 +162,7 @@ export function Footer() {
               <FaInstagram size={14} />
             </a>
             <a
-              href="https://tiktok.com"
+              href="https://www.tiktok.com/@digitalcopyuio"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-social-btn"
