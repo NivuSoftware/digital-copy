@@ -13,6 +13,7 @@ import { SuppliesSection } from '../components/home/SuppliesSection';
 import { TestimonialsSection } from '../components/home/TestimonialsSection';
 import { TrustBar } from '../components/home/TrustBar';
 import { FloatingWhatsApp } from '../components/ui/FloatingWhatsApp';
+import { ProductsCatalog } from '../components/home/ProductsCatalog';
 
 export default function Home() {
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
@@ -33,28 +34,31 @@ export default function Home() {
       {/* 3. Sección Soluciones de Impresión ("Tecnología que impulsa tu negocio") */}
       <SolutionsSection />
 
-      {/* 4. Catálogo de Servicios (5 Cards Blancas con Iconos Verdes) */}
+      {/* 4. Catálogo de Impresoras (6 tarjetas) */}
+      <ProductsCatalog />
+
+      {/* 5. Catálogo de Servicios (5 Cards Blancas con Iconos Verdes) */}
       <ServicesSection onSelectService={setSelectedService} />
 
-      {/* 5. Marcas con las que trabajamos ("Trabajamos con marcas líderes") */}
+      {/* 6. Marcas con las que trabajamos ("Trabajamos con marcas líderes") */}
       <BrandsSection />
 
-      {/* 6. Propuesta de Valor y Garantías */}
+      {/* 7. Propuesta de Valor y Garantías */}
       <TrustBar />
 
-      {/* 7. Banner Solución a Medida ("Tu equipo ideal, con el mejor respaldo") */}
+      {/* 8. Banner Solución a Medida ("Tu equipo ideal, con el mejor respaldo") */}
       <CustomQuoteSection />
 
-      {/* 8. Sobre Digital Copy ("Más de 15 años cuidando la productividad de tu empresa") */}
+      {/* 9. Sobre Digital Copy ("Más de 15 años cuidando la productividad de tu empresa") */}
       <AboutSection />
 
-      {/* 9. Lo que dicen nuestros clientes (3 Testimonios con 5 estrellas verdes) */}
+      {/* 10. Lo que dicen nuestros clientes (3 Testimonios con 5 estrellas verdes) */}
       <TestimonialsSection />
 
-      {/* 10. Suministros y Consumibles (Tóneres, tambores y repuestos) */}
+      {/* 11. Suministros y Consumibles (Tóneres, tambores y repuestos) */}
       <SuppliesSection />
 
-      {/* 11. Pie de Página con Banner de Consulta y Redes */}
+      {/* 12. Pie de Página con Banner de Consulta y Redes */}
       <Footer />
 
       {/* Modal Accesible de Detalle de Servicio */}

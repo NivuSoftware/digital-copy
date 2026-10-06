@@ -15,7 +15,7 @@ export const servicesData: ServiceItem[] = [
   {
     id: 'venta',
     number: '01',
-    title: 'Venta de Equipos',
+    title: 'Venta de impresoras y copiadoras',
     shortDesc: 'Copiadoras e impresoras nuevas y seminuevas de las mejores marcas.',
     fullDesc:
       'Asesoría técnica para seleccionar el equipo que tu empresa necesita: equipos monocromáticos y a color, nuevos y seminuevos garantizados de marcas líderes como Konica Minolta (bizhub C224 / C360i) y Ricoh (IM C300 / IM C2500).',
@@ -25,7 +25,7 @@ export const servicesData: ServiceItem[] = [
   {
     id: 'alquiler',
     number: '02',
-    title: 'Alquiler de Equipos',
+    title: 'Alquiler de impresoras y copiadoras',
     shortDesc: 'Soluciones flexibles y accesibles para tu negocio.',
     fullDesc:
       'Modelos de renting corporativo y costo por página todo incluido: equipos multifuncionales de última generación, mantenimiento programado, repuestos y tóner garantizados sin inversión inicial de capital.',
@@ -35,7 +35,7 @@ export const servicesData: ServiceItem[] = [
   {
     id: 'soporte',
     number: '03',
-    title: 'Servicio Técnico',
+    title: 'Servicio técnico de impresoras y copiadoras',
     shortDesc: 'Mantenimiento preventivo y correctivo. Técnicos expertos a tu servicio.',
     fullDesc:
       'Atención técnica especializada en sitio para Konica Minolta y Ricoh. Diagnóstico de tarjetas lógicas, sistemas de fusor, unidades de imagen, calibración de color y resolución de fallas de red con instrumental de precisión.',
@@ -45,7 +45,7 @@ export const servicesData: ServiceItem[] = [
   {
     id: 'suministros',
     number: '04',
-    title: 'Suministros',
+    title: 'Repuestos y suministros',
     shortDesc: 'Tóners, repuestos y consumibles originales y compatibles de alta calidad.',
     fullDesc:
       'Tóneres certificados de alto rendimiento para Konica Minolta (TN-216, TN-321, TN-328), botellas Ricoh MP 301, tubos de color CMYK, tambores, cuchillas de limpieza y papel Crome A4 con entrega inmediata.',
@@ -77,7 +77,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
         </span>
         <h2>Todo lo que tu empresa necesita</h2>
         <p>
-          Te ofrecemos soluciones completas en impresión, con equipos, insumos y soporte técnico.
+          Te ofrecemos soluciones completas de impresión en Quito: venta, alquiler, servicio técnico, repuestos y suministros para empresas.
         </p>
       </div>
 

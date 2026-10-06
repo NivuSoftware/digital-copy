@@ -36,11 +36,8 @@ export function HeroSection() {
             animate={reduce ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
-            ¿Buscas una impresora
-            <br />
-            o <span className="hero-title-accent">soporte técnico</span>
-            <br />
-            especializado?
+            ¿Buscas una <span className="hero-title-accent">impresora</span> o{' '}
+            <span className="hero-title-accent">soporte técnico</span> especializado en Quito?
           </motion.h1>
 
           {/* Párrafo descriptivo (máximo 3 líneas, ancho óptimo de lectura) */}
@@ -50,7 +47,7 @@ export function HeroSection() {
             animate={reduce ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
           >
-            En Digital Copy proveemos equipos, repuestos y suministros Konica Minolta y Ricoh con atención inmediata.
+            Te ofrecemos soluciones completas de impresión en Quito: venta, alquiler, servicio técnico, repuestos y suministros para empresas.
           </motion.p>
 
           {/* Pequeña línea horizontal de acento verde #6EBF4A */}
