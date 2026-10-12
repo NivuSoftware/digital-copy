@@ -6,7 +6,7 @@ const quoteWa =
 
 export function CustomQuoteSection() {
   return (
-    <section className="custom-quote-section" aria-label="Solución a medida">
+    <section id="cotizar" className="custom-quote-section" aria-label="Solución a medida">
       <div className="custom-quote-banner">
         {/* Columna Izquierda: Copy y CTA */}
         <div className="custom-quote-left">

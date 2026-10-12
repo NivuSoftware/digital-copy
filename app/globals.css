@@ -127,3 +127,22 @@ a {
   transform: translateY(-2px);
   color: #ffffff;
 }
+
+/* ==========================================================================
+   SEO / ACCESIBILIDAD — Texto solo para lectores de pantalla y rastreadores
+   Permite entregar encabezados semánticos indexables (h2) a Google y a los
+   motores de IA sin alterar NI UN PÍXEL del diseño visual existente.
+   Técnica estándar (clip-rect) recomendada por WCAG y WebAIM.
+   ========================================================================== */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

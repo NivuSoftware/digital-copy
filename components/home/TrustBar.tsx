@@ -25,7 +25,13 @@ const trustItems = [
 
 export function TrustBar() {
   return (
-    <section className="value-band-section" aria-label="Propuesta de valor y garantías">
+    <section className="value-band-section" aria-labelledby="valor-heading">
+      {/* Encabezado semántico indexable: invisible en pantalla, legible por
+          Google y motores de IA. No modifica el diseño visual. */}
+      <h2 id="valor-heading" className="sr-only">
+        Por qué elegir Digital Copy: garantías y respaldo en impresión corporativa
+      </h2>
+
       <div className="value-band-grid">
         {trustItems.map((item) => {
           const Icon = item.icon;

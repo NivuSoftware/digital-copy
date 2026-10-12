@@ -1,0 +1,27 @@
+{
+  "name": "Digital Copy | Impresoras y Servicio Técnico en Quito",
+  "short_name": "Digital Copy",
+  "description": "Venta, alquiler y servicio técnico de impresoras y copiadoras multifuncionales en Quito, Ecuador. Especialistas en Konica Minolta y Ricoh.",
+  "lang": "es-EC",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#091220",
+  "theme_color": "#6EBF4A",
+  "categories": ["business", "shopping", "productivity"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/imgs/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    }
+  ]
+}

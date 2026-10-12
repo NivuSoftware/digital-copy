@@ -14,6 +14,7 @@ import { TestimonialsSection } from '../components/home/TestimonialsSection';
 import { TrustBar } from '../components/home/TrustBar';
 import { FloatingWhatsApp } from '../components/ui/FloatingWhatsApp';
 import { ProductsCatalog } from '../components/home/ProductsCatalog';
+import { StructuredData } from '../components/seo/StructuredData';
 
 export default function Home() {
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
@@ -22,6 +23,11 @@ export default function Home() {
 
   return (
     <main>
+      {/* Datos estructurados Schema.org (reseñas + migas de pan).
+          No renderiza nada visible: solo etiquetas JSON-LD para
+          Google, Bing y motores de respuesta con IA. */}
+      <StructuredData />
+
       {/* Scroll Progress Bar in #6EBF4A */}
       <motion.div className="progress" style={{ scaleX: progressScaleX }} />
 

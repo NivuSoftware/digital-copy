@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Página principal: Digital Copy Quito -->
+  <url>
+    <loc>https://digitalcopyec.com/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>https://digitalcopyec.com/imgs/servicio-tecnico-mantenimiento.jpg</image:loc>
+      <image:title>Servicio técnico de impresoras en Quito</image:title>
+      <image:caption>Técnico especialista de Digital Copy realizando mantenimiento a una multifuncional Konica Minolta bizhub en Quito, Ecuador.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://digitalcopyec.com/imgs/equipos-multifuncionales.jpg</image:loc>
+      <image:title>Venta de impresoras y copiadoras multifuncionales</image:title>
+      <image:caption>Equipos multifuncionales nuevos y seminuevos Konica Minolta y Ricoh para empresas en Quito.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://digitalcopyec.com/imgs/alquiler-equipos-corporativo.jpg</image:loc>
+      <image:title>Alquiler de impresoras y copiadoras para empresas</image:title>
+      <image:caption>Renting corporativo de equipos de impresión con mantenimiento y tóner incluido en Quito.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://digitalcopyec.com/imgs/suministros-toners-tintas.jpg</image:loc>
+      <image:title>Tóner, cilindros y suministros de impresión</image:title>
+      <image:caption>Tóneres originales y compatibles para Konica Minolta, Ricoh, Kyocera y Xerox con entrega inmediata en Quito.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://digitalcopyec.com/imgs/products/KONICA_MINOLTA_C360i.png</image:loc>
+      <image:title>Konica Minolta bizhub C360i</image:title>
+      <image:caption>Multifuncional a color y blanco y negro Konica Minolta bizhub C360i, 36 ppm, formato A3/A4.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://digitalcopyec.com/imgs/products/RICOH_IM_C4500.png</image:loc>
+      <image:title>Ricoh IM C4500</image:title>
+      <image:caption>Multifuncional a color Ricoh IM C4500 de alto rendimiento, 45 ppm, formato A3/A4.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Anclas de sección: ayudan a Google a construir enlaces a fragmentos (jump-to links) -->
+  <url>
+    <loc>https://digitalcopyec.com/#equipos</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://digitalcopyec.com/#catalogo</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://digitalcopyec.com/#servicios</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://digitalcopyec.com/#suministros</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://digitalcopyec.com/#marcas</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://digitalcopyec.com/#nosotros</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://digitalcopyec.com/#contacto</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

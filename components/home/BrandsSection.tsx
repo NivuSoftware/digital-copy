@@ -20,8 +20,14 @@ export function BrandsSection() {
   const repeatedBrands = [...brands, ...brands, ...brands];
 
   return (
-    <section id="marcas" className="brands-section" aria-label="Marcas con las que trabajamos">
+    <section id="marcas" className="brands-section" aria-labelledby="marcas-heading">
       <div className="brands-container">
+        {/* Encabezado semántico indexable adicional (invisible en pantalla):
+            refuerza las marcas como entidades para Google y motores de IA. */}
+        <h2 id="marcas-heading" className="sr-only">
+          Marcas de impresoras con las que trabajamos: Konica Minolta, Ricoh, Kyocera y Xerox
+        </h2>
+
         <motion.span
           className="brands-label"
           initial={{ opacity: 0, y: reduce ? 0 : 10 }}

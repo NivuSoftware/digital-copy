@@ -34,7 +34,7 @@ const testimonials: TestimonialItem[] = [
 
 export function TestimonialsSection() {
   return (
-    <section className="testimonials-section" aria-label="Lo que dicen nuestros clientes">
+    <section id="testimonios" className="testimonials-section" aria-label="Lo que dicen nuestros clientes">
       <div className="section-header-center">
         <span className="lower-tag" style={{ justifyContent: 'center' }}>
           LO QUE DICEN NUESTROS CLIENTES
